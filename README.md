@@ -7,6 +7,8 @@ Docker-based so the env still builds in a year and behaves the same on the lapto
 ## Quick start
 
 ```sh
+git clone --recurse-submodules git@github.com:handriss/nn-zero-to-hero.git
+# (or: git submodule update --init  inside an existing clone)
 make help          # list every chore
 make build         # first time only
 make up && make url
@@ -16,7 +18,8 @@ Open the printed URL → JupyterLab opens with the repo mounted.
 
 ## Layout
 
-- `NN-video/` — one folder per video, notebooks live there.
+- `NN-video/` — one folder per video, my notebooks live there.
+- `reference/nn-zero-to-hero/` — submodule, Karpathy's upstream notebooks. Read-only reference; don't edit. Bump with `git submodule update --remote reference/nn-zero-to-hero` if upstream adds new lectures.
 - `confusion-log.md` — running list of things that didn't click. Add mid-video, resolve on Sundays.
 
 ## Notes to future me
